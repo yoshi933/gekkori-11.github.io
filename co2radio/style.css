@@ -1,6 +1,6 @@
 :root {
     font-size: medium;
-    --page-width: 1100px;
+    --page-width: min(1500px, calc(100% - 64px));
     --panel: rgba(24, 41, 73, 0.3);
     --panel-strong: rgba(24, 41, 73, 0.85);
     --line: rgb(58, 60, 83);
@@ -524,6 +524,10 @@ main {
 }
 
 @media (max-width: 700px) {
+    :root {
+        --page-width: 100%;
+    }
+
     header {
         align-items: flex-start;
         flex-direction: column;
