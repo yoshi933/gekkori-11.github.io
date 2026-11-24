@@ -644,3 +644,146 @@ main {
         padding-top: 0;
     }
 }
+
+@media (min-width: 701px) {
+    #kikaku {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 1.5rem;
+    }
+
+    #contents {
+        grid-column: 1 / -1;
+    }
+
+    .radio_contents {
+        width: 100%;
+        margin: 1.5rem 0 0;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1099px) {
+    .radio_contents:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 901px) {
+    main {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.8fr) minmax(420px, 1.2fr);
+        column-gap: clamp(2rem, 5vw, 5rem);
+        align-items: center;
+        padding-top: clamp(3rem, 6vw, 6rem);
+    }
+
+    #icon {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        width: min(100%, 520px);
+        justify-self: center;
+        margin: 0;
+    }
+
+    .about {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: end;
+        padding: 1.5rem 0 1rem;
+        text-align: left;
+        font-size: clamp(1.1rem, 1.7vw, 1.55rem);
+    }
+
+    #top_btn {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: start;
+        justify-content: flex-start;
+    }
+
+    #jikai {
+        display: grid;
+        grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+        column-gap: clamp(1.5rem, 3vw, 3rem);
+        align-items: center;
+    }
+
+    #jikai h1 {
+        grid-column: 1 / -1;
+    }
+
+    #onair {
+        grid-column: 1 / -1;
+    }
+
+    #thumbnail {
+        grid-column: 1;
+        grid-row: 3;
+        width: 100%;
+    }
+
+    #title {
+        grid-column: 1;
+        grid-row: 4;
+        align-self: start;
+    }
+
+    #jikai_row {
+        grid-column: 2;
+        grid-row: 3 / span 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    #jikai_btn {
+        grid-column: 1 / -1;
+    }
+
+    #guest {
+        display: grid;
+        grid-template-columns: minmax(210px, 0.28fr) minmax(500px, 0.72fr);
+        column-gap: clamp(1.5rem, 3vw, 3rem);
+        align-items: start;
+    }
+
+    #guest_title {
+        position: sticky;
+        top: 120px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+        padding-top: 2rem;
+    }
+
+    #guest_title h2 {
+        padding-top: 0;
+    }
+
+    #guest_contents {
+        width: 100%;
+        margin: 2rem 0 4rem;
+    }
+
+    #tyuui {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    #kikaku {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #jikai_row {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .jikai_contents {
+        min-height: 180px;
+        border-bottom: 0 !important;
+    }
+
+    .jikai_contents:not(:last-child) {
+        border-right: 2px solid var(--line);
+    }
+}
